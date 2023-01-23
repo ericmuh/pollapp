@@ -31,12 +31,12 @@ app.baseURL = 'http://localhost/pollapp/'
 #--------------------------------------------------------------------
 
 database.default.hostname = localhost
-database.default.database = pollapp
-database.default.username = root
-database.default.password = P@ssword100%
-database.default.DBDriver = MySQLi
-database.default.DBPrefix =
-database.default.port = 3306
+# database.default.database = pollapp
+# database.default.username = root
+# database.default.password = P@ssword100%
+# database.default.DBDriver = MySQLi
+# database.default.DBPrefix =
+# database.default.port = 3306
 
 # database.tests.hostname = localhost
 # database.tests.database = ci4_test
