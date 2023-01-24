@@ -6,6 +6,8 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('welcome_message');
+        $this->load->model('Poll_model');
+        $data['polls'] = $this->Poll_model->get_polls();
+        $this->load->view('home_view', $data);
     }
 }

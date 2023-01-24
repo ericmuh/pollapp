@@ -8,10 +8,12 @@ class Poll_model extends CI_Model {
 
     public function get_poll_options() {
         // code to retrieve poll options from the database
+         public function get_polls() {
         $this->db->select('*');
-        $this->db->from('poll_options');
+        $this->db->from('polls');
         $query = $this->db->get();
         return $query->result_array();
+    }
     }
 
     public function submit_vote($option_id) {
