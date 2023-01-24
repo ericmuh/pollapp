@@ -1,19 +1,21 @@
 <?php
-class Poll_model extends CI_Model {
+
+namespace App\Models;
+use CodeIgniter\Model;
+
+class PollModel extends Model{
     public function get_poll_question() {
         // code to retrieve poll question from the database
         $query = $this->db->get('polls');
         return $query->row()->question;
     }
 
-    public function get_poll_options() {
-        // code to retrieve poll options from the database
-         public function get_polls() {
-        $this->db->select('*');
-        $this->db->from('polls');
-        $query = $this->db->get();
-        return $query->result_array();
-    }
+    protected $table = 'polls';
+
+    // Function to get polls
+    public function getPolls()
+    {
+        return $this->findAll();
     }
 
     public function submit_vote($option_id) {

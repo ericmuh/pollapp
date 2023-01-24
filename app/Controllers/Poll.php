@@ -1,4 +1,5 @@
 <?php
+
 class Poll extends CI_Controller {
     public function index() {
         // load the model
